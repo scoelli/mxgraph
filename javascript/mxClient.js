@@ -52122,8 +52122,10 @@ mxGraphView.prototype.updateCellState = function(state)
 					}
 					else
 					{
-						state.origin.x += geo.x * pState.width / this.scale + offset.x;
-						state.origin.y += geo.y * pState.height / this.scale + offset.y;
+						// state.origin.x += geo.x * pState.width / this.scale + offset.x;
+						// state.origin.y += geo.y * pState.height / this.scale + offset.y;
+						state.origin.x += geo.x * pState.width / this.scale + parseInt(offset.attributes.x.value);
+						state.origin.y += geo.y * pState.height / this.scale + parseInt(offset.attributes.y.value);
 					}
 				}
 				else
